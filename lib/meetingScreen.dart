@@ -105,15 +105,15 @@ class _MeetingWidgetState extends State<MeetingWidget> {
         return result;
       }
       if(meetingIdController.text.isNotEmpty && meetingPasswordController.text.isNotEmpty){
-        ZoomOptions zoomOptions = new ZoomOptions(
+        ZoomOptions zoomOptions = ZoomOptions(
           domain: "zoom.us",
-          appKey: "", //API KEY FROM ZOOM - Sdk API Key
-          appSecret: "", //API SECRET FROM ZOOM - Sdk API Secret
+          appKey: "rK3U3UrmRAOg3xIehPmLmA", //API KEY FROM ZOOM - Sdk API Key
+          appSecret: "eoc3EfqL4eXTdy4UHxjgv8W07EuknA5X", //API SECRET FROM ZOOM - Sdk API Secret
         );
-        var meetingOptions = new ZoomMeetingOptions(
+        var meetingOptions = ZoomMeetingOptions(
             userId: 'username', //pass username for join meeting only --- Any name eg:- EVILRATT.
-            meetingId: '', //pass meeting id for join meeting only
-            meetingPassword: '', //pass meeting password for join meeting only
+            meetingId: "7698470375", //pass meeting id for join meeting only
+            meetingPassword: "Mk6dMFSbHWM0XZibd1auaJFjFMr2KN.1", //pass meeting password for join meeting only
             disableDialIn: "true",
             disableDrive: "true",
             disableInvite: "true",
@@ -121,8 +121,7 @@ class _MeetingWidgetState extends State<MeetingWidget> {
             disableTitlebar: "false",
             viewOptions: "true",
             noAudio: "false",
-            noDisconnectAudio: "false"
-        );
+            noDisconnectAudio: "false");
 
         var zoom = ZoomView();
         zoom.initZoom(zoomOptions).then((results) {
